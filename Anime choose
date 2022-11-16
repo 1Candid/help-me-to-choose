@@ -1,0 +1,19 @@
+import random
+import webbrowser as wb
+import time
+
+anime_list = ["blue lock", "chainsaw man", "monster", "berserk", "mob psycho 100", "My hero academia", "Vinland saga"]
+
+request = random.choice(anime_list)
+print("anime", request)
+print("Do you want to see a description of anime?")
+answer = input("Answer: ")
+
+if answer.lower() == "yes" or answer.lower() == "yea" or answer.lower() == "yep" or answer.lower() == "ye":
+    time.sleep(0.5)
+    wb.open("http://www.google.com/search?q=" + "anime " + request + " description")
+elif answer.lower() == "no" or answer.lower() == "nah" or answer.lower() == "ne" or answer.lower() == "nie":
+    time.sleep(0.5)
+    wb.open("http://www.google.com/search?q=" + "anime " + request)
+else:
+    pass
